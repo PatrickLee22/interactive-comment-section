@@ -110,7 +110,7 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
           src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'
         />
       </div>
-      <section className='comment-content'>
+      <div className='comment-content'>
         <div className='comment--header'>
           <div className='primary-data'>
             <img
@@ -124,7 +124,7 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
             )}
             <span className='comment-age'>{createdAt}</span>
           </div>
-          <section className='comment-buttons desktop-view'>
+          <div className='comment-buttons desktop-view'>
             {data.user.username === data.currUser.username &&
               <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
                 <img src={delete_icon} alt='delete button'/>
@@ -149,7 +149,7 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
                 <span>Reply</span>
               </div>
             }
-          </section>
+          </div>
         </div>
         {(data.content && data.content.length > 0 && data.editEnable) ?
           <div className='comment-edit-container'>
@@ -176,7 +176,7 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
               src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'
             />
           </div>
-          <section className='comment-buttons mobile-view'>
+          <div className='comment-buttons mobile-view'>
             {data.user.username === data.currUser.username &&
               <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
                 <img src={delete_icon} alt='delete button'/>
@@ -194,19 +194,19 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
                 <span>Reply</span>
               </div>
             }
-          </section>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
     {data.replyClicked &&
-      <section className='reply-adder'>
+      <div className='reply-adder'>
         <ReplyAdder 
           username={data.currUser.username}
           image={data.currUser.image}
           replyingTo={data.user.username} 
           addReplyRequest={handleReplyRequest}
         />
-      </section>
+      </div>
     }
     {data.deleteClicked &&
       <DeleteModal

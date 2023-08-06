@@ -52,8 +52,8 @@ const ReplyAdder = ({username, image, replyingTo, addReplyRequest}: Props) =>{
 
 
 
-  return <section className='replyadder-section'>
-    <section className='adder--body'>
+  return <div className='replyadder-section'>
+    <div className='adder--body'>
       <img 
         src={context.currUser.image.png} 
         className='adder-profile desktop-view'
@@ -73,8 +73,8 @@ const ReplyAdder = ({username, image, replyingTo, addReplyRequest}: Props) =>{
       >
         REPLY
       </button>
-    </section>
-    <section className='adder--footer'>
+    </div>
+    <div className='adder--footer'>
       <img 
         src={context.currUser.image.png} 
         className='adder-profile'
@@ -85,8 +85,8 @@ const ReplyAdder = ({username, image, replyingTo, addReplyRequest}: Props) =>{
       >
         {replyingTo ? 'REPLY' : 'SEND'}
       </button>
-    </section>
-  </section>
+    </div>
+  </div>
 
 }
 

@@ -48,8 +48,8 @@ const CommentAdder = ({username, image, replyingTo, addComment}: Props) =>{
     setContext({...context, text: e.target.value})
   }
 
-  return <section className='adder-section'>
-    <section className='adder--body'>
+  return <div className='adder-section'>
+    <div className='adder--body'>
       <img 
         src={context.currUser.image.png} 
         className='adder-profile desktop-view'
@@ -67,8 +67,8 @@ const CommentAdder = ({username, image, replyingTo, addComment}: Props) =>{
       >
         {replyingTo ? 'REPLY' : 'SEND'}
       </button>
-    </section>
-    <section className='adder--footer'>
+    </div>
+    <div className='adder--footer'>
       <img 
         src={context.currUser.image.png} 
         className='adder-profile'
@@ -79,8 +79,8 @@ const CommentAdder = ({username, image, replyingTo, addComment}: Props) =>{
       >
         {replyingTo ? 'REPLY' : 'SEND'}
       </button>
-    </section>
-  </section>
+    </div>
+  </div>
 
 }
 

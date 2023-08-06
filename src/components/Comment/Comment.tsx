@@ -132,7 +132,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
           <span className='score-value'>{data.score}</span>
           <img src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'/>
         </div>
-        <section className='comment-content'>
+        <div className='comment-content'>
           <div className='comment--header'>
             <div className='primary-data'>
               <img
@@ -148,7 +148,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
               )}
               <span className='comment-age' >{createdAt}</span>
             </div>
-            <section className='comment-buttons desktop-view'>
+            <div className='comment-buttons desktop-view'>
               {data.user.username === data.currUser.username &&
                 <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
                   <img src={delete_icon} alt='delete button'/>
@@ -177,7 +177,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
                   <span>Reply</span>
                 </div>
               }
-            </section>
+            </div>
           </div>
           {(data.content && data.content.length > 0 && data.editEnable) ?
             <div className='comment-edit-container'>
@@ -203,7 +203,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
                 src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'
               />
             </div>
-            <section className='comment-buttons mobile-view'>
+            <div className='comment-buttons mobile-view'>
               {data.user.username === data.currUser.username &&
                 <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
                   <img src={delete_icon} alt='delete button'/>
@@ -225,9 +225,9 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
                   <span>Reply</span>
                 </div>
               }
-            </section>
+            </div>
           </div>
-        </section>
+        </div>
     </div>
     {data.replyClicked &&
       <div className='reply-adder'>
@@ -240,7 +240,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
       </div>
     }
     {data.replies && (data.replies.length > 0) && 
-      <section className='reply-container'>
+      <div className='reply-container'>
         {data.replies.map(items =>{
           return (
             <Reply
@@ -256,7 +256,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
               deleteCommentRequest={deleteCommentRequest}
             />
         )})} 
-      </section>
+      </div>
     }
     {data.deleteClicked &&
       <DeleteModal
