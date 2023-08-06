@@ -1,7 +1,7 @@
 import './CommentAdder.css'
 
-import { useState, useEffect } from 'react'
-import { User, CommentData, ReplyData } from '../../models'
+import { useState} from 'react'
+import { User, CommentData} from '../../models'
 
 interface Props{
     username: string,
