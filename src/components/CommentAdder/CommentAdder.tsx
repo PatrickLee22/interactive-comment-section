@@ -51,7 +51,7 @@ const CommentAdder = ({username, image, replyingTo, addComment}: Props) =>{
   return <section className='adder-section'>
     <section className='adder--body'>
       <img 
-        src={'src/assets/' + context.currUser.image.png.substring(2)} 
+        src={context.currUser.image.png} 
         className='adder-profile desktop-view'
         alt='juliusomo profile pic'/>
       <textarea
@@ -70,7 +70,7 @@ const CommentAdder = ({username, image, replyingTo, addComment}: Props) =>{
     </section>
     <section className='adder--footer'>
       <img 
-        src={'src/assets/' + context.currUser.image.png.substring(2)} 
+        src={context.currUser.image.png} 
         className='adder-profile'
         alt='juliusomo profile pic'/>
       <button

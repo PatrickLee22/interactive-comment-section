@@ -136,7 +136,7 @@ const Comment = ({id, content, createdAt, score, user, replies, currUser, addRep
           <div className='comment--header'>
             <div className='primary-data'>
               <img
-                src={'/src/assets/' + data.user.image.png.substring(2)}
+                src={data.user.image.png}
                 className='commentor-profile-pic'
               />
               <span className='commentor-username'>{data.user.username}</span>

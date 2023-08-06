@@ -114,7 +114,7 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
         <div className='comment--header'>
           <div className='primary-data'>
             <img
-              src={'/src/assets/' + data.user.image.png.substring(2)} className='commentor-profile-pic'
+              src={data.user.image.png} className='commentor-profile-pic'
             />
             <span className='commentor-username'>{data.user.username}</span>
             {data.user.username === currUser.username && (

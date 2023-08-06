@@ -53,25 +53,39 @@ const ReplyAdder = ({username, image, replyingTo, addReplyRequest}: Props) =>{
 
 
   return <section className='replyadder-section'>
-    <img 
-      src={'src/assets/' + context.currUser.image.png.substring(2)} 
-      className='adder-profile'
-      alt='juliusomo profile pic'
-    />
-    <textarea
-      className='replyadder-textbox'
-      placeholder='Add a reply...'
-      
-      onChange={(e) => handleChange(e)}
-    >
-      {`@${context.replyingTo}, ${context.text}`}
-    </textarea>
-    <button
-      className='replyadder-send'
-      onClick={() => sendReply()}
-    >
-      REPLY
-    </button>
+    <section className='adder--body'>
+      <img 
+        src={context.currUser.image.png} 
+        className='adder-profile desktop-view'
+        alt='juliusomo profile pic'
+      />
+      <textarea
+        className='replyadder-textbox'
+        placeholder='Add a reply...'
+        
+        onChange={(e) => handleChange(e)}
+      >
+        {`@${context.replyingTo}, ${context.text}`}
+      </textarea>
+      <button
+        className='replyadder-send desktop-view'
+        onClick={() => sendReply()}
+      >
+        REPLY
+      </button>
+    </section>
+    <section className='adder--footer'>
+      <img 
+        src={context.currUser.image.png} 
+        className='adder-profile'
+        alt='juliusomo profile pic'/>
+      <button
+        className='adder-send'
+        onClick={() =>sendReply()}
+      >
+        {replyingTo ? 'REPLY' : 'SEND'}
+      </button>
+    </section>
   </section>
 
 }
