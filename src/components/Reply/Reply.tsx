@@ -103,18 +103,18 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
     <div className='comment-card'>
       <div className='comment-score desktop-view'>
         <img 
-          src={plus_icon} className='score-icons plus-icon' onClick={() => updateScore(1)}
+          src={plus_icon} className='score-icons plus-icon' onClick={() => updateScore(1)} alt='score plus button'
         />
         <span className='score-value'>{data.score}</span>
         <img 
-          src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)}
+          src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'
         />
       </div>
       <section className='comment-content'>
         <div className='comment--header'>
           <div className='primary-data'>
             <img
-              src={data.user.image.png} className='commentor-profile-pic'
+              src={data.user.image.png} className='commentor-profile-pic' alt={`${user.username} profile pic`}
             />
             <span className='commentor-username'>{data.user.username}</span>
             {data.user.username === currUser.username && (
@@ -127,25 +127,25 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
           <section className='comment-buttons desktop-view'>
             {data.user.username === data.currUser.username &&
               <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
-                <img src={delete_icon}/>
+                <img src={delete_icon} alt='delete button'/>
                 <span>Delete</span>
               </div>
             }
             {(data.user && data.user.username === data.currUser.username) ?
               (data.editEnable ? 
                 <div className='edit-button'>
-                  <img src={edit_icon}/>
+                  <img src={edit_icon}  alt='edit button'/>
                   <span>Edit</span>
                 </div> 
                 :
                 <div className='edit-button' onClick={()=> editSwitch()}>
-                  <img src={edit_icon}/>
+                  <img src={edit_icon}  alt='edit button'/>
                   <span>Edit</span>
                 </div>
               )
               :
               <div className='reply-button' onClick={()=> toggleReplyClicked()}>
-                <img src={reply_icon} className='reply-icon'/>
+                <img src={reply_icon} className='reply-icon' alt='reply button'/>
                 <span>Reply</span>
               </div>
             }
@@ -169,28 +169,28 @@ const Reply = ({id, content, createdAt, score, replyingTo, user, currUser, addRe
         <div className='comment--footer mobile-view'>
           <div className='comment-score'>
             <img 
-              src={plus_icon} className='score-icons plus-icon' onClick={() => updateScore(1)}
+              src={plus_icon} className='score-icons plus-icon' onClick={() => updateScore(1)} alt='score plus button'
             />
             <span className='score-value'>{data.score}</span>
             <img 
-              src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)}
+              src={minus_icon} className='score-icons minus-icon' onClick={() => updateScore(-1)} alt='score minus button'
             />
           </div>
           <section className='comment-buttons mobile-view'>
             {data.user.username === data.currUser.username &&
               <div className='delete-button' onClick={()=> setDeleteClicked(true)}>
-                <img src={delete_icon}/>
+                <img src={delete_icon} alt='delete button'/>
                 <span>Delete</span>
               </div>
             }
             {(data.user && data.user.username === data.currUser.username) ?
               <div className='edit-button' onClick={()=> editSwitch()}>
-                <img src={edit_icon} />
+                <img src={edit_icon} alt='edit button'/>
                 <span>Edit</span>
               </div> 
               :
               <div className='reply-button' onClick={()=> toggleReplyClicked()}>
-                <img src={reply_icon} className='reply-icon'/>
+                <img src={reply_icon} className='reply-icon' alt='reply button'/>
                 <span>Reply</span>
               </div>
             }
