@@ -1,0 +1,61 @@
+
+.replyadder-section{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  width: 97%;
+  max-width: 700px;
+  height: 150px;
+  gap: 10px;
+
+  padding: 20px;
+  border-radius: 5px;
+
+  background-color: var(--white);
+}
+
+.replyadder-profile{
+  height: 50px;
+  margin: 10px;
+}
+
+.replyadder-textbox{
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  text-align: left;
+
+  width: 70%;
+  height: 100px;
+
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 7px;
+  border-width: thin;
+  border-color: var(--light-gray);
+  color: var(--dark-blue);
+  background-color: var(--white);
+
+  resize: none;
+}
+.replyadder-send{
+  font-size: 16px;
+  font-weight: 700;
+
+  width: 180px;
+  height: 50px;
+
+  margin: 10px;
+
+  border-radius: 10px;
+  border-width: 0;
+  background-color: var(--moderate-blue);
+}
+
+.replyadder-send:hover, .replyadder-send:focus{
+  opacity: 0.5;
+}
+@media screen and (max-width:320px){
+
+}
