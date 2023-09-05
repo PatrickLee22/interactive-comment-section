@@ -9,15 +9,14 @@
 .comment-card{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
   
   width: 95%;
   max-width: 700px;
-  /* min-height: 190px; */
   height: 100%;
   margin: 10px 0;
-  padding: 10px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 
   border-radius: 10px;
   background-color: var(--white);
@@ -79,7 +78,6 @@
 }
 
 
-/* Comment Header */
 .comment--header{
   display: flex;
   flex-direction: row;
@@ -111,6 +109,7 @@
 }
 
 .delete-button {
+  cursor: pointer;
   margin: 0 20px;
 }
 
@@ -119,12 +118,18 @@
 }
 
 .delete-button span{
+  cursor: pointer;
   font-weight: 500;
   color: var(--soft-red);
   margin: 0 5px;
 }
 
+.reply-button{
+  cursor: pointer;
+}
+
 .reply-button span{
+  cursor: pointer;
   font-weight: 500;
   color: var(--moderate-blue);
   margin: 0 5px;
@@ -132,6 +137,10 @@
 
 .reply-button:hover, .reply-button:focus{
   opacity: 0.5;
+}
+
+.edit-button{
+  cursor: pointer;
 }
 
 .edit-button span{

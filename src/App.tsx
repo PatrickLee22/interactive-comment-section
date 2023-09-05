@@ -72,7 +72,7 @@ function App() {
   }
 
   return (
-    <section className='app'>
+    <main className='app'>
       {comments.map(items =>{
         return (
           <Comment
@@ -97,7 +97,7 @@ function App() {
           addComment={addComment}
         />
       }
-    </section>
+    </main>
   )
 }
 
